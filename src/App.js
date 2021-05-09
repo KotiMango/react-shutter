@@ -1,7 +1,10 @@
+import React from "react";
+//Import pages
+import AboutUs from "../src/pages/AboutUs";
 function App() {
   return (
     <div className="App">
-      <h1>Film</h1>
+      <AboutUs />
     </div>
   );
 }
