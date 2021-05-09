@@ -53,6 +53,8 @@ const ServicesSection = () => {
   );
 };
 
+//Styling Components
+
 //Changing slightly the style of the about component
 const Services = styled(About)`
   h2 {
