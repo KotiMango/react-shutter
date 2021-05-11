@@ -9,14 +9,14 @@ const AboutSection = () => {
   //framer motion variants
   const titleAnim = {
     hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 2 } },
+    show: { opacity: 1, transition: { duration: 0.25 } },
   };
   const container = {
     hidden: { x: 100 },
     show: {
       x: 0,
       transition: {
-        duration: 0.75,
+        duration: 0.5,
         ease: "easeOut",
         staggerChildren: 1,
         when: "afterChildren",
