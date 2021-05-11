@@ -1,26 +1,49 @@
 import React from "react";
 import home1 from "../img/home1.png";
+import { motion } from "framer-motion";
 //Styled
 //import styled from "styled-components";
 //Importing style components individually
 import { About, Description, Image, Hide } from "../styles";
 const AboutSection = () => {
+  //framer motion variants
+  const titleAnim = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 2 } },
+  };
+  const container = {
+    hidden: { x: 100 },
+    show: {
+      x: 0,
+      transition: {
+        duration: 0.75,
+        ease: "easeOut",
+        staggerChildren: 1,
+        when: "afterChildren",
+      },
+    },
+  };
   return (
     <About>
       <Description>
-        <div className="title">
+        <motion.div
+          className="title"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
           <Hide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2 variants={titleAnim}>
               your <span>dreams</span> come
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>true.</h2>
+            <motion.h2 variants={titleAnim}>true.</motion.h2>
           </Hide>
-        </div>
+        </motion.div>
         <p>Contact us if you want something being filmed </p>
         <button>Contact Us</button>
       </Description>
