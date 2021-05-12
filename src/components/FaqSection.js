@@ -6,7 +6,7 @@ import { AnimateSharedLayout } from "framer-motion";
 import { useScroll } from "./useScroll";
 import { scrollReveal } from "../animations";
 const FaqSection = () => {
-  const [controls, element] = useScroll();
+  const [element, controls] = useScroll();
   return (
     <Faq
       variants={scrollReveal}

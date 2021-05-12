@@ -12,7 +12,7 @@ import styled from "styled-components";
 import { useScroll } from "./useScroll";
 import { scrollReveal } from "../animations";
 const ServicesSection = () => {
-  const [controls, element] = useScroll();
+  const [element, controls] = useScroll();
   return (
     <Services
       variants={scrollReveal}
