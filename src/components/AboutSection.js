@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import home1 from "../img/home1.png";
 //Styled
 //import styled from "styled-components";
@@ -30,7 +31,9 @@ const AboutSection = () => {
         <motion.p variants={fade}>
           Contact us if you want something being filmed
         </motion.p>
-        <motion.button variants={fade}>Contact Us</motion.button>
+        <Link to="/contact">
+          <motion.button variants={fade}>Contact Us</motion.button>
+        </Link>
       </Description>
       <Image>
         <motion.img
