@@ -68,16 +68,19 @@ const ServicesSection = () => {
 const Services = styled(About)`
   h2 {
     padding-bottom: 5rem;
-    p {
-      width: 70%;
-      padding: 2rem 0rem 4rem 0rem;
-    }
+  }
+  p {
+    width: 70%;
+    padding: 2rem 0rem 4rem 0rem;
   }
 `;
 //Wraps the icons onto the size of the display
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 //Styling for each card
 const Card = styled.div`
